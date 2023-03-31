@@ -30,7 +30,7 @@ const Register = () => {
 					borderWidth: "medium",
 					borderColor: "#FF7518",
 					padding: "0 2em 2em 2em",
-					width: "20vw",
+					width: "290px",
 				}}
 			>
 				<h2>Register</h2>
