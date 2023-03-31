@@ -32,3 +32,8 @@ button:hover {
 	background-color: #ff7518;
 	color: #fff;
 }
+
+input {
+	padding: 0.8em 0.4em;
+	border: 1px solid black;
+}

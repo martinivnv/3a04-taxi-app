@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PageTemplate from "../pageTemplate/PageTemplate";
+import { Link } from "react-router-dom";
 
 const Register = () => {
 	const [email, setEmail] = useState("");
@@ -66,6 +67,8 @@ const Register = () => {
 						Register
 					</button>
 				</form>
+				<p style={{ marginBottom: "0.2em" }}>Already have an account?</p>
+				<Link to="/login">Login</Link>
 			</div>
 		</PageTemplate>
 	);
