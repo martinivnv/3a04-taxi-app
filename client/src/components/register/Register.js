@@ -33,6 +33,7 @@ const Register = () => {
 					padding: "0 2em 2em 2em",
 					width: "290px",
 				}}
+				className="rounded-corners"
 			>
 				<h2>Register</h2>
 				<form
