@@ -25,51 +25,53 @@ const Register = () => {
 
 	return (
 		<PageTemplate>
-			<div
-				style={{
-					borderStyle: "solid",
-					borderWidth: "medium",
-					borderColor: "#FF7518",
-					padding: "0 2em 2em 2em",
-					width: "290px",
-				}}
-				className="rounded-corners"
-			>
-				<h2>Register</h2>
-				<form
-					onSubmit={handleSubmit}
-					style={{ display: "flex", flexDirection: "column", gap: "1.5em" }}
+			<div style={{ marginTop: "20vh" }}>
+				<div
+					style={{
+						borderStyle: "solid",
+						borderWidth: "medium",
+						borderColor: "#FF7518",
+						padding: "0 2em 2em 2em",
+						width: "290px",
+					}}
+					className="rounded-corners"
 				>
-					<input
-						name="emailOrUsername"
-						type="text"
-						value={email}
-						onChange={handleEmailChange}
-						placeholder="Enter your email..."
-						style={{ fontSize: "1em" }}
-					/>
-					<input
-						name="password"
-						type="password"
-						value={password}
-						onChange={handlePassChange}
-						placeholder="Enter your password..."
-						style={{ fontSize: "1em" }}
-					/>
-					<input
-						name="password"
-						type="password"
-						value={confirmPassword}
-						onChange={handleConfirmPassChange}
-						placeholder="Confirm password..."
-						style={{ fontSize: "1em" }}
-					/>
-					<button type="submit" style={{ fontSize: "1em" }}>
-						Register
-					</button>
-				</form>
-				<p style={{ marginBottom: "0.2em" }}>Already have an account?</p>
-				<Link to="/login">Login</Link>
+					<h2>Register</h2>
+					<form
+						onSubmit={handleSubmit}
+						style={{ display: "flex", flexDirection: "column", gap: "1.5em" }}
+					>
+						<input
+							name="emailOrUsername"
+							type="text"
+							value={email}
+							onChange={handleEmailChange}
+							placeholder="Enter your email..."
+							style={{ fontSize: "1em" }}
+						/>
+						<input
+							name="password"
+							type="password"
+							value={password}
+							onChange={handlePassChange}
+							placeholder="Enter your password..."
+							style={{ fontSize: "1em" }}
+						/>
+						<input
+							name="password"
+							type="password"
+							value={confirmPassword}
+							onChange={handleConfirmPassChange}
+							placeholder="Confirm password..."
+							style={{ fontSize: "1em" }}
+						/>
+						<button type="submit" style={{ fontSize: "1em" }}>
+							Register
+						</button>
+					</form>
+					<p style={{ marginBottom: "0.2em" }}>Already have an account?</p>
+					<Link to="/login">Login</Link>
+				</div>
 			</div>
 		</PageTemplate>
 	);
