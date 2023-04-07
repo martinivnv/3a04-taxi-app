@@ -19,41 +19,43 @@ const Login = () => {
 
 	return (
 		<PageTemplate>
-			<div
-				style={{
-					borderStyle: "solid",
-					borderWidth: "medium",
-					borderColor: "#FF7518",
-					padding: "0 2em 2em 2em",
-					width: "290px",
-				}}
-				className="rounded-corners"
-			>
-				<h2>Login</h2>
-				<form
-					onSubmit={handleSubmit}
-					style={{ display: "flex", flexDirection: "column", gap: "1.5em" }}
+			<div style={{ marginTop: "20vh" }}>
+				<div
+					style={{
+						borderStyle: "solid",
+						borderWidth: "medium",
+						borderColor: "#FF7518",
+						padding: "0 2em 2em 2em",
+						width: "290px",
+					}}
+					className="rounded-corners"
 				>
-					<input
-						name="emailOrUsername"
-						type="text"
-						value={email}
-						onChange={handleEmailChange}
-						placeholder="Enter your email..."
-						style={{ fontSize: "1em" }}
-					/>
-					<input
-						name="password"
-						type="password"
-						value={password}
-						onChange={handlePassChange}
-						placeholder="Enter your password..."
-						style={{ fontSize: "1em" }}
-					/>
-					<button type="submit" style={{ fontSize: "1em" }}>
-						Log in
-					</button>
-				</form>
+					<h2>Login</h2>
+					<form
+						onSubmit={handleSubmit}
+						style={{ display: "flex", flexDirection: "column", gap: "1.5em" }}
+					>
+						<input
+							name="emailOrUsername"
+							type="text"
+							value={email}
+							onChange={handleEmailChange}
+							placeholder="Enter your email..."
+							style={{ fontSize: "1em" }}
+						/>
+						<input
+							name="password"
+							type="password"
+							value={password}
+							onChange={handlePassChange}
+							placeholder="Enter your password..."
+							style={{ fontSize: "1em" }}
+						/>
+						<button type="submit" style={{ fontSize: "1em" }}>
+							Log in
+						</button>
+					</form>
+				</div>
 			</div>
 		</PageTemplate>
 	);
