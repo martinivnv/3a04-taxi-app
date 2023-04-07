@@ -8,7 +8,10 @@ const OfferCarpool = ({ destination }) => {
 				backgroundColor: "#8c8c8c5e",
 			}}
 		>
-			<p>Offer a carpool to {destination}?</p>
+			<p>
+				Offer a carpool to{" "}
+				<span style={{ fontWeight: "bold" }}>{destination}</span>?
+			</p>
 			<button>🚖 Offer Carpool</button>
 		</div>
 	);

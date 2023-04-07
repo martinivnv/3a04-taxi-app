@@ -20,13 +20,22 @@ const CarpoolPage = ({ destination }) => {
 				<OfferCarpool destination={destination} />
 				<div>
 					<h3>Available Carpools</h3>
-					{offers ? (
+					{offers.length > 0 ? (
 						offers.map((o) => (
 							<AvailableCarpool user={o.user} minutesAway={o.minutesAway} />
 						))
 					) : (
-						<p>No carpool offers available to {destination} at this time</p>
+						<p style={{ margin: "0 2em" }}>
+							No carpool offers to{" "}
+							<span style={{ fontWeight: "bold" }}>{destination}</span>{" "}
+							available at this time...
+						</p>
 					)}
+				</div>
+				<div>
+					<button style={{ width: "60%", marginBottom: "2em" }}>
+						Return to Map
+					</button>
 				</div>
 			</div>
 		</PageTemplate>

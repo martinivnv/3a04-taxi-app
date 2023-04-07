@@ -9,7 +9,7 @@ function App() {
 	return (
 		<div className="App">
 			<BrowserRouter>
-				<CarpoolPage destination="Doughbox Pizza, Main Street, Hamilton" />
+				<CarpoolPage destination="DoughBox Wood Fired Pizza & Pasta - Hamilton" />
 			</BrowserRouter>
 		</div>
 	);
