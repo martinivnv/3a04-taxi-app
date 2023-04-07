@@ -1,6 +1,6 @@
 import Map from "./Map";
 import PageTemplate from "../pageTemplate/PageTemplate";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const MainPage = () => {
 	const [destination, setDestination] = useState("");
@@ -12,6 +12,13 @@ const MainPage = () => {
 	const handleSearchClicked = (e) => {
 		console.log(destination);
 	};
+
+	useEffect(() => {
+		document.body.style.overflow = "hidden";
+		return () => {
+			document.body.style.overflow = "auto";
+		};
+	}, []);
 
 	return (
 		<PageTemplate>
@@ -35,7 +42,7 @@ const MainPage = () => {
 						placeholder="Enter your destination..."
 						style={{
 							fontSize: "1em",
-							width: "70%",
+							width: "65%",
 							zIndex: 10,
 							borderRadius: "1em",
 							padding: "1em",
