@@ -27,6 +27,7 @@ const Login = () => {
 					padding: "0 2em 2em 2em",
 					width: "290px",
 				}}
+				className="rounded-corners"
 			>
 				<h2>Login</h2>
 				<form
