@@ -1,14 +1,22 @@
 import { useState } from "react";
 import PageTemplate from "../pageTemplate/PageTemplate";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
+	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [confirmPassword, setConfirmPassword] = useState("");
+	const navigate = useNavigate();
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		window.alert(`Thank you for registering, ${name}!`);
+		navigate("/main");
+	};
+
+	const handleNameChange = (e) => {
+		setName(e.target.value);
 	};
 
 	const handleEmailChange = (e) => {
@@ -25,7 +33,9 @@ const Register = () => {
 
 	return (
 		<PageTemplate>
-			<div style={{ marginTop: "20vh" }}>
+			<div style={{ marginTop: "5vh" }}>
+				<h1>Welcome to Qurb!</h1>
+				<h4>The easiest way to share a taxi.</h4>
 				<div
 					style={{
 						borderStyle: "solid",
@@ -42,7 +52,15 @@ const Register = () => {
 						style={{ display: "flex", flexDirection: "column", gap: "1.5em" }}
 					>
 						<input
-							name="emailOrUsername"
+							name="name"
+							type="text"
+							value={name}
+							onChange={handleNameChange}
+							placeholder="Enter your name..."
+							style={{ fontSize: "1em" }}
+						/>
+						<input
+							name="email"
 							type="text"
 							value={email}
 							onChange={handleEmailChange}

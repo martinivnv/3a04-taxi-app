@@ -1,16 +1,13 @@
 import Map from "./Map";
 import PageTemplate from "../pageTemplate/PageTemplate";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const MainPage = () => {
 	const [destination, setDestination] = useState("");
 
 	const handleDestinationChange = (e) => {
 		setDestination(e.target.value);
-	};
-
-	const handleSearchClicked = (e) => {
-		console.log(destination);
 	};
 
 	useEffect(() => {
@@ -48,12 +45,14 @@ const MainPage = () => {
 							padding: "1em",
 						}}
 					/>
-					<button
+					<Link
+						to="/carpools"
+						state={{ destination: destination }}
 						style={{ borderRadius: "1em", marginLeft: "0.5em" }}
-						onClick={handleSearchClicked}
+						className="looksLikeButton"
 					>
 						Search
-					</button>
+					</Link>
 				</div>
 
 				<Map />

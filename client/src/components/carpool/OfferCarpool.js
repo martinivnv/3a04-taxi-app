@@ -1,4 +1,4 @@
-const OfferCarpool = ({ destination }) => {
+const OfferCarpool = ({ destination, onOfferCarpool }) => {
 	return (
 		<div
 			style={{
@@ -12,7 +12,7 @@ const OfferCarpool = ({ destination }) => {
 				Offer a carpool to{" "}
 				<span style={{ fontWeight: "bold" }}>{destination}</span>?
 			</p>
-			<button>🚖 Offer Carpool</button>
+			<button onClick={onOfferCarpool}>🚖 Offer Carpool</button>
 		</div>
 	);
 };
