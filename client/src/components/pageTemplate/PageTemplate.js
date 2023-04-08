@@ -8,7 +8,6 @@ const PageTemplate = ({ children }) => {
 				style={{
 					display: "flex",
 					justifyContent: "center",
-					marginTop: "20vh",
 				}}
 			>
 				{children}
