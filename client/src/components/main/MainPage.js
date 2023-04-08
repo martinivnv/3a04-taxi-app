@@ -10,10 +10,6 @@ const MainPage = () => {
 		setDestination(e.target.value);
 	};
 
-	const handleSearchClicked = (e) => {
-		console.log(destination);
-	};
-
 	useEffect(() => {
 		document.body.style.overflow = "hidden";
 		return () => {

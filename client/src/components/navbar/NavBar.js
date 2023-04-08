@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../../images/Qurb logo.png";
 
 const NavBar = () => {
@@ -11,6 +12,8 @@ const NavBar = () => {
 				flexDirection: "row",
 				backgroundColor: "#FF7518",
 				boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+				justifyContent: "space-between",
+				alignItems: "center",
 			}}
 		>
 			<div
@@ -27,6 +30,19 @@ const NavBar = () => {
 					style={{ height: "59px", width: "50px", marginRight: "0.2em" }}
 				/>
 				<h1>Qurb</h1>
+			</div>
+			<div>
+				<Link
+					to="/settings"
+					style={{
+						textDecoration: "none",
+						fontSize: "3em",
+						color: "white",
+						marginRight: "0.5em",
+					}}
+				>
+					⚙
+				</Link>
 			</div>
 		</div>
 	);

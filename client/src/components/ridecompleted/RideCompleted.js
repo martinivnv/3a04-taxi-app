@@ -10,6 +10,7 @@ const RideCompleted = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		window.alert(`Thank you for rating ${otherRider}!`);
 	};
 
 	useEffect(() => {
@@ -27,21 +28,39 @@ const RideCompleted = () => {
 						borderColor: "#FF7518",
 						padding: "0 2em 2em 2em",
 						width: "290px",
-						marginTop: "10vh",
+						marginTop: "5vh",
 					}}
 					className="rounded-corners"
 				>
 					<h1>You have arrived at {destination}!</h1>
-					<p>
-						Thank you for riding with Qurb! We hope you had a great experience!
+					<p style={{ fontSize: "1.2em" }}>
+						Thank you for riding with{" "}
+						<span style={{ fontWeight: "bold" }}>Qurb</span>! We hope you had a
+						great experience!
 					</p>
 					<div style={{ lineHeight: 0.5 }}>
 						<h2>Calculated Price</h2>
-						<p>{fare}</p>
+						<p
+							style={{
+								color: "limegreen",
+								fontWeight: "bold",
+								fontSize: "1.5em",
+							}}
+						>
+							{fare}
+						</p>
 					</div>
 					<div style={{ lineHeight: 0.5 }}>
 						<h2>Points Earned: </h2>
-						<p>{points}</p>
+						<p
+							style={{
+								color: "limegreen",
+								fontWeight: "bold",
+								fontSize: "1.5em",
+							}}
+						>
+							{points}
+						</p>
 					</div>
 
 					<h2>Rate your fellow rider(s):</h2>
@@ -58,13 +77,7 @@ const RideCompleted = () => {
 							<option value="1">1 star</option>
 						</select>
 
-						<Link
-							to="/main"
-							className="looksLikeButton"
-							style={{ marginTop: "2em" }}
-						>
-							Submit
-						</Link>
+						<button type="submit">Submit</button>
 					</form>
 				</div>
 				<Link
