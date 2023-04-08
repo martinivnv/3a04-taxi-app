@@ -1,3 +1,5 @@
+import logo from "../../images/Qurb logo.png";
+
 const NavBar = () => {
 	return (
 		<div
@@ -12,9 +14,18 @@ const NavBar = () => {
 			}}
 		>
 			<div
-				style={{ display: "flex", flexDirection: "row", paddingLeft: "2em" }}
+				style={{
+					display: "flex",
+					flexDirection: "row",
+					paddingLeft: "1em",
+					alignItems: "center",
+				}}
 			>
-				<h1 style={{ color: "white", marginRight: "0.5em" }}>Logo</h1>
+				<img
+					src={logo}
+					alt="QurbLogo"
+					style={{ height: "59px", width: "50px", marginRight: "0.2em" }}
+				/>
 				<h1>Qurb</h1>
 			</div>
 		</div>
