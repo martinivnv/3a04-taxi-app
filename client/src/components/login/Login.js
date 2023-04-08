@@ -1,12 +1,16 @@
 import { useState } from "react";
 import PageTemplate from "../pageTemplate/PageTemplate";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+	const navigate = useNavigate();
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		window.alert(`Welcome back, ${email}!`);
+		navigate("/main");
 	};
 
 	const handleEmailChange = (e) => {
@@ -55,6 +59,8 @@ const Login = () => {
 							Log in
 						</button>
 					</form>
+					<p style={{ marginBottom: "0.2em" }}>Don't have an account?</p>
+					<Link to="/">Register</Link>
 				</div>
 			</div>
 		</PageTemplate>

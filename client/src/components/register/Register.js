@@ -1,14 +1,17 @@
 import { useState } from "react";
 import PageTemplate from "../pageTemplate/PageTemplate";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [confirmPassword, setConfirmPassword] = useState("");
+	const navigate = useNavigate();
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		window.alert(`Thank you for registering, ${email}!`);
+		navigate("/main");
 	};
 
 	const handleEmailChange = (e) => {
@@ -25,7 +28,9 @@ const Register = () => {
 
 	return (
 		<PageTemplate>
-			<div style={{ marginTop: "20vh" }}>
+			<div style={{ marginTop: "5vh" }}>
+				<h1>Welcome to Qurb!</h1>
+				<h4>The easiest way to share a taxi.</h4>
 				<div
 					style={{
 						borderStyle: "solid",

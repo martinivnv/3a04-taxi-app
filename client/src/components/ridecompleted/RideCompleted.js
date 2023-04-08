@@ -1,12 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PageTemplate from "../pageTemplate/PageTemplate";
 
 const RideCompleted = () => {
 	const [fare, setFare] = useState("");
 	const [points, setPoints] = useState("");
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 	};
+
+	useEffect(() => {
+		setFare("$13.30");
+		setPoints("12");
+	}, []);
 
 	return (
 		<PageTemplate>
@@ -28,11 +34,11 @@ const RideCompleted = () => {
 					</p>
 					<div style={{ lineHeight: 0.5 }}>
 						<h2>Calculated Price</h2>
-						<p>$26.60</p>
+						<p>{fare}</p>
 					</div>
 					<div style={{ lineHeight: 0.5 }}>
 						<h2>Points Earned: </h2>
-						<p>12</p>
+						<p>{points}</p>
 					</div>
 
 					<h2>Rate your fellow riders:</h2>
