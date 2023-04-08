@@ -2,15 +2,20 @@ import { useEffect, useState } from "react";
 import PageTemplate from "../pageTemplate/PageTemplate";
 import OfferCarpool from "./OfferCarpool";
 import AvailableCarpool from "./AvailableCarpool";
+import { useLocation } from "react-router-dom";
 
-const CarpoolPage = ({ destination }) => {
+const CarpoolPage = () => {
 	const [offers, setOffers] = useState([]);
+	// const [destination, setDestination] = useState("");
+	const location = useLocation();
+	const { destination } = location.state;
 
 	useEffect(() => {
 		setOffers([
 			{ user: "dennis", minutesAway: 4 },
 			{ user: "housam", minutesAway: 7 },
 		]);
+		// setDestination()
 	}, []);
 
 	return (
