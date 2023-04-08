@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import PageTemplate from "../pageTemplate/PageTemplate";
 import OfferCarpool from "./OfferCarpool";
 import AvailableCarpool from "./AvailableCarpool";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import taxiGif from "../../images/taxi_gif.gif";
 
 const CarpoolPage = () => {
@@ -10,6 +10,7 @@ const CarpoolPage = () => {
 	const location = useLocation();
 	const { destination } = location.state;
 	const [currentlyOffering, setCurrentlyOffering] = useState(false);
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		setOffers([
@@ -20,6 +21,12 @@ const CarpoolPage = () => {
 
 	const onOfferCarpool = () => {
 		setCurrentlyOffering(true);
+	};
+
+	const onOfferAccepted = (otherRider) => {
+		navigate("/rideComplete", {
+			state: { destination: destination, otherRider: otherRider },
+		});
 	};
 
 	return (
@@ -53,7 +60,11 @@ const CarpoolPage = () => {
 						<h3>Available Carpools</h3>
 						{offers.length > 0 ? (
 							offers.map((o) => (
-								<AvailableCarpool user={o.user} minutesAway={o.minutesAway} />
+								<AvailableCarpool
+									user={o.user}
+									minutesAway={o.minutesAway}
+									onOfferAccepted={onOfferAccepted}
+								/>
 							))
 						) : (
 							<p style={{ margin: "0 2em" }}>

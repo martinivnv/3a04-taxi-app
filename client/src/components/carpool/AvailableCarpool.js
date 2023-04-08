@@ -1,16 +1,11 @@
 import { useState } from "react";
 
-const AvailableCarpool = ({
-	destination,
-	user,
-	minutesAway,
-	onOfferAccepted,
-}) => {
-	const onAccept = (e) => {
+const AvailableCarpool = ({ user, minutesAway, onOfferAccepted }) => {
+	const onAccept = () => {
 		window.alert(
 			`You have accepted ${user}'s carpool offer. They will pick you up in ${minutesAway} minutes.`
 		);
-		onOfferAccepted();
+		onOfferAccepted(user);
 	};
 
 	const [display, setDisplay] = useState(true);
