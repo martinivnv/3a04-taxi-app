@@ -3,6 +3,7 @@ import PageTemplate from "../pageTemplate/PageTemplate";
 import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
+	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [confirmPassword, setConfirmPassword] = useState("");
@@ -10,8 +11,12 @@ const Register = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		window.alert(`Thank you for registering, ${email}!`);
+		window.alert(`Thank you for registering, ${name}!`);
 		navigate("/main");
+	};
+
+	const handleNameChange = (e) => {
+		setName(e.target.value);
 	};
 
 	const handleEmailChange = (e) => {
@@ -47,7 +52,15 @@ const Register = () => {
 						style={{ display: "flex", flexDirection: "column", gap: "1.5em" }}
 					>
 						<input
-							name="emailOrUsername"
+							name="name"
+							type="text"
+							value={name}
+							onChange={handleNameChange}
+							placeholder="Enter your name..."
+							style={{ fontSize: "1em" }}
+						/>
+						<input
+							name="email"
 							type="text"
 							value={email}
 							onChange={handleEmailChange}
