@@ -9,7 +9,7 @@ const ShareLocation = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		window.alert(`Location Shared to` + ContactName);
+		window.alert(`Location Shared to ` + ContactName);
 		setContactName("");
 		setContactPhone("");
         navigate("/share");
@@ -49,7 +49,7 @@ const ShareLocation = () => {
 						>
 							<input
 								type="Info"
-								placeholder="Current Info"
+								placeholder="Contact Name"
 								name="Contact Name"
 								value={ContactName}
 								onChange={handleContactName}
@@ -58,7 +58,7 @@ const ShareLocation = () => {
 
 							<input
 								type="Info"
-								placeholder="New Info"
+								placeholder="Contact Phone"
 								value={ContactPhone}
 								onChange={handleContactPhone}
 								name="Contact Phone"
