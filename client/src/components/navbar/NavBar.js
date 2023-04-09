@@ -34,6 +34,20 @@ const NavBar = ({ showSettings }) => {
 				</div>
 				<div>
 					<Link
+						to="/share"
+						style={{
+							textDecoration: "none",
+							fontSize: "3em",
+							color: "white",
+							marginRight: "2em",
+						}}
+					>
+						🎯
+					</Link>
+            	</div>
+
+				<div>
+					<Link
 						to="/settings"
 						style={{
 							textDecoration: "none",
@@ -45,6 +59,7 @@ const NavBar = ({ showSettings }) => {
 						⚙
 					</Link>
 				</div>
+				
 			</div>
 		);
 	} else {
