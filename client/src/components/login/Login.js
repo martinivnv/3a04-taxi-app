@@ -22,7 +22,7 @@ const Login = () => {
 	};
 
 	return (
-		<PageTemplate>
+		<PageTemplate showSettings={false}>
 			<div style={{ marginTop: "20vh" }}>
 				<div
 					style={{
