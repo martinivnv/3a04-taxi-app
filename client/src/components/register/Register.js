@@ -32,7 +32,7 @@ const Register = () => {
 	};
 
 	return (
-		<PageTemplate>
+		<PageTemplate showSettings={false}>
 			<div style={{ marginTop: "5vh" }}>
 				<h1>Welcome to Qurb!</h1>
 				<h4>The easiest way to share a taxi.</h4>
