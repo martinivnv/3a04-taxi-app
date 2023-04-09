@@ -12,8 +12,7 @@ const ShareLocation = () => {
 		window.alert(`Location Shared to ` + ContactName);
 		setContactName("");
 		setContactPhone("");
-        navigate("/share");
-
+		navigate("/share");
 	};
 
 	const handleContactName = (e) => {
@@ -37,11 +36,8 @@ const ShareLocation = () => {
 					}}
 					className="rounded-corners"
 				>
-					<head>
-						<title>Settings</title>
-					</head>
 					<body>
-						<h1>Settings</h1>
+						<h1>Share Location</h1>
 						<h4 align="left">Enter Contact</h4>
 						<form
 							onSubmit={handleSubmit}

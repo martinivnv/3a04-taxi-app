@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "../../images/Qurb logo.png";
 
 const NavBar = ({ showSettings }) => {
-	if (showSettings){
+	if (showSettings) {
 		return (
 			<div
 				style={{
@@ -32,19 +32,6 @@ const NavBar = ({ showSettings }) => {
 					/>
 					<h1>Qurb</h1>
 				</div>
-				<div>
-					<Link
-						to="/share"
-						style={{
-							textDecoration: "none",
-							fontSize: "3em",
-							color: "white",
-							marginRight: "2em",
-						}}
-					>
-						🎯
-					</Link>
-            	</div>
 
 				<div>
 					<Link
@@ -59,7 +46,6 @@ const NavBar = ({ showSettings }) => {
 						⚙
 					</Link>
 				</div>
-				
 			</div>
 		);
 	} else {
@@ -95,7 +81,6 @@ const NavBar = ({ showSettings }) => {
 			</div>
 		);
 	}
-	
 };
 
 export default NavBar;
