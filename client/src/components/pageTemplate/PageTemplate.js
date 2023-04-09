@@ -1,9 +1,9 @@
 import NavBar from "../navbar/NavBar";
 
-const PageTemplate = ({ children }) => {
+const PageTemplate = ({ children, showSettings=true }) => {
 	return (
 		<div>
-			<NavBar />
+			<NavBar showSettings={showSettings}/>
 			<div
 				style={{
 					display: "flex",
