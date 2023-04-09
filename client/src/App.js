@@ -6,6 +6,10 @@ import MainPage from "./components/main/MainPage";
 import CarpoolPage from "./components/carpool/CarpoolPage";
 import AccountSettings from "./components/accountSettings/AccountSettings";
 import RideCompleted from "./components/rideCompleted/RideCompleted";
+import ShareLocation from "./components/shareLocation/ShareLocation";
+
+
+
 
 function App() {
 	return (
@@ -18,6 +22,7 @@ function App() {
 					<Route path="/carpools" element={<CarpoolPage />}></Route>
 					<Route path="/rideComplete" element={<RideCompleted />}></Route>
 					<Route path="/settings" element={<AccountSettings />}></Route>
+					<Route path="/share" element={<ShareLocation />}></Route>
 				</Routes>
 			</BrowserRouter>
 		</div>
