@@ -56,6 +56,22 @@ const MainPage = () => {
 				</div>
 
 				<Map />
+
+				<Link
+					to="/share"
+					className="looksLikeButton"
+					style={{
+						position: "absolute",
+						bottom: "20px",
+						right: "20px",
+						fontSize: "1.2em",
+						color: "white",
+						backgroundColor: "#ff7518",
+						boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+					}}
+				>
+					🎯 Share Location
+				</Link>
 			</div>
 		</PageTemplate>
 	);
