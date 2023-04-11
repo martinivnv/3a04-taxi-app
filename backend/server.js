@@ -49,16 +49,6 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", userSchema);
 
-// Home page
-app.get("/", (req, res) => {
-  res.render("index.ejs", { title: "Home" });
-});
-
-// Login page
-app.get("/login", (req, res) => {
-  res.render("login.ejs");
-});
-
 app.post("/login", async (req, res) => {
   //   const { email, password } = req.body;
   const user = await User.findOne({ email: req.body.email });
